@@ -2,4 +2,4 @@ const sumar = (num1, num2) => {
   return num1 + num2;
 }
 
-console.log(sumar(2, 5));
+console.log(sumar(2, 1341));
