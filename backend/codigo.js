@@ -1,5 +1,16 @@
-const sumar = (num1, num2) => {
-  return num1 + num2;
+function calcularEdad(fechaNacimiento) {
+  const hoy = new Date();
+  const nacimiento = new Date(fechaNacimiento);
+  let edad = hoy.getFullYear() - nacimiento.getFullYear();
+  const mes = hoy.getMonth() - nacimiento.getMonth();
+
+  if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+    edad--;
+  }
+  return edad;
 }
 
-console.log(sumar(2, 1341));
+module.exports = calcularEdad;
+
+// Ejemplo de uso:
+// console.log(calcularEdad('1990-06-15'));
